@@ -1,0 +1,214 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x763e9f98, pid=2332, tid=6696
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0-b105 mixed mode, sharing)
+# Problematic frame:
+# C  [SHLWAPI.dll+0x19f98]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0455d400):  JavaThread "Thread-2" [_thread_in_native, id=6696]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x37003700
+
+Registers:
+EAX=0x37003700, EBX=0x00000000, ECX=0x001278d0, EDX=0x00000002
+ESP=0x0400f15c, EBP=0x0400f168, ESI=0x80004005, EDI=0x00000002
+EIP=0x763e9f98, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0400f15c)
+0x0400f15c:   00154b30 001278d0 73754c18 0400f178
+0x0400f16c:   764c9ebb 37003700 0013e620 0400f194
+0x0400f17c:   764c4bc6 00154b20 00000000 0013e62c
+0x0400f18c:   0013e4c8 00000000 0400f5d8 764b3453
+0x0400f19c:   00000000 0015d380 0015d358 00000000
+0x0400f1ac:   0013e620 000008fc 7780d74d 0054d9d2
+0x0400f1bc:   fffffffe 7784349f 00650044 006b0073
+0x0400f1cc:   006f0074 005c0070 0061004e 0065006d 
+
+Instructions: (pc=0x763e9f98)
+0x763e9f88:   89 45 fc 8b 45 08 56 be 05 40 00 80 85 c0 74 28
+0x763e9f98:   8b 08 8d 55 f8 52 68 d4 9f 3e 76 50 ff 11 8b f0 
+
+
+Stack: [0x03fc0000,0x04010000),  sp=0x0400f15c,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [SHLWAPI.dll+0x19f98]
+C  [shell32.dll+0x99ebb]
+C  [shell32.dll+0x94bc6]
+C  [shell32.dll+0x83453]
+C  [shell32.dll+0x3864e]
+C  [shell32.dll+0x6c83e]
+C  [awt.dll+0x137669]
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZ)J+33
+j  sun.awt.shell.Win32ShellFolder2.getChildByPath(Ljava/lang/String;)Lsun/awt/shell/Win32ShellFolder2;+8
+j  sun.awt.shell.Win32ShellFolderManager2.getPersonal()Lsun/awt/shell/Win32ShellFolder2;+21
+j  sun.awt.shell.Win32ShellFolder2.listFiles(Z)[Ljava/io/File;+34
+j  sun.awt.shell.ShellFolder.listFiles()[Ljava/io/File;+2
+j  sun.awt.shell.Win32ShellFolderManager2.isFileSystemRoot(Ljava/io/File;)Z+69
+j  sun.awt.shell.ShellFolder.isFileSystemRoot(Ljava/io/File;)Z+4
+j  javax.swing.filechooser.FileSystemView.isFileSystemRoot(Ljava/io/File;)Z+1
+j  javax.swing.filechooser.FileSystemView.getSystemDisplayName(Ljava/io/File;)Ljava/lang/String;+45
+j  com.edw.main.Detect_Usb.Get_Usb_list()Ljava/lang/String;+35
+j  com.edw.main.Detect_Usb$1.run()V+4
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZZ)J+0
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZ)J+33
+j  sun.awt.shell.Win32ShellFolder2.getChildByPath(Ljava/lang/String;)Lsun/awt/shell/Win32ShellFolder2;+8
+j  sun.awt.shell.Win32ShellFolderManager2.getPersonal()Lsun/awt/shell/Win32ShellFolder2;+21
+j  sun.awt.shell.Win32ShellFolder2.listFiles(Z)[Ljava/io/File;+34
+j  sun.awt.shell.ShellFolder.listFiles()[Ljava/io/File;+2
+j  sun.awt.shell.Win32ShellFolderManager2.isFileSystemRoot(Ljava/io/File;)Z+69
+j  sun.awt.shell.ShellFolder.isFileSystemRoot(Ljava/io/File;)Z+4
+j  javax.swing.filechooser.FileSystemView.isFileSystemRoot(Ljava/io/File;)Z+1
+j  javax.swing.filechooser.FileSystemView.getSystemDisplayName(Ljava/io/File;)Ljava/lang/String;+45
+j  com.edw.main.Detect_Usb.Get_Usb_list()Ljava/lang/String;+35
+j  com.edw.main.Detect_Usb$1.run()V+4
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0455e000 JavaThread "Image Fetcher 0" daemon [_thread_blocked, id=7676]
+  0x0455dc00 JavaThread "Thread-3" [_thread_blocked, id=7760]
+=>0x0455d400 JavaThread "Thread-2" [_thread_in_native, id=6696]
+  0x0455d000 JavaThread "RMI RenewClean-[192.168.1.61:50561]" daemon [_thread_blocked, id=5036]
+  0x04553800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=7740]
+  0x04917000 JavaThread "GC Daemon" daemon [_thread_blocked, id=4508]
+  0x04916c00 JavaThread "RMI Reaper" [_thread_blocked, id=6468]
+  0x0490e400 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=7860]
+  0x04909000 JavaThread "RMI TCP Accept-9001" daemon [_thread_in_native, id=3988]
+  0x04900000 JavaThread "TimerQueue" daemon [_thread_blocked, id=2340]
+  0x002f7000 JavaThread "DestroyJavaVM" [_thread_blocked, id=8076]
+  0x0454f000 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=8152]
+  0x018dc400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6452]
+  0x018dc000 JavaThread "AWT-Shutdown" [_thread_blocked, id=6540]
+  0x018d9000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=7100]
+  0x0189d400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7912]
+  0x01897000 JavaThread "CompilerThread0" daemon [_thread_blocked, id=5844]
+  0x01896800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6628]
+  0x01896000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=740]
+  0x01858000 JavaThread "Finalizer" daemon [_thread_blocked, id=1544]
+  0x0184f400 JavaThread "Reference Handler" daemon [_thread_blocked, id=7956]
+
+Other Threads:
+  0x01846000 VMThread [id=7952]
+  0x0189f400 WatcherThread [id=2828]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 432K [0x23a20000, 0x23b20000, 0x23f00000)
+  eden space 896K,  41% used [0x23a20000, 0x23a7c3c8, 0x23b00000)
+  from space 64K, 100% used [0x23b10000, 0x23b20000, 0x23b20000)
+  to   space 64K,   0% used [0x23b00000, 0x23b00000, 0x23b10000)
+ tenured generation   total 4096K, used 1626K [0x23f00000, 0x24300000, 0x27a20000)
+   the space 4096K,  39% used [0x23f00000, 0x24096a38, 0x24096c00, 0x24300000)
+ compacting perm gen  total 12288K, used 1345K [0x27a20000, 0x28620000, 0x2ba20000)
+   the space 12288K,  10% used [0x27a20000, 0x27b70418, 0x27b70600, 0x28620000)
+    ro space 8192K,  66% used [0x2ba20000, 0x2bf69920, 0x2bf69a00, 0x2c220000)
+    rw space 12288K,  52% used [0x2c220000, 0x2c866130, 0x2c866200, 0x2ce20000)
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	C:\Program Files\Java\jdk1.6.0\bin\java.exe
+0x777f0000 - 0x7792c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77240000 - 0x77314000 	C:\Windows\system32\kernel32.dll
+0x75a40000 - 0x75a8a000 	C:\Windows\system32\KERNELBASE.dll
+0x770d0000 - 0x77170000 	C:\Windows\system32\ADVAPI32.dll
+0x77420000 - 0x774cc000 	C:\Windows\system32\msvcrt.dll
+0x75c80000 - 0x75c99000 	C:\Windows\SYSTEM32\sechost.dll
+0x76250000 - 0x762f1000 	C:\Windows\system32\RPCRT4.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0\jre\bin\msvcr71.dll
+0x6d7c0000 - 0x6da07000 	C:\Program Files\Java\jdk1.6.0\jre\bin\client\jvm.dll
+0x77170000 - 0x77239000 	C:\Windows\system32\USER32.dll
+0x777a0000 - 0x777ee000 	C:\Windows\system32\GDI32.dll
+0x77940000 - 0x7794a000 	C:\Windows\system32\LPK.dll
+0x774d0000 - 0x7756d000 	C:\Windows\system32\USP10.dll
+0x74a50000 - 0x74a82000 	C:\Windows\system32\WINMM.dll
+0x77a00000 - 0x77a1f000 	C:\Windows\system32\IMM32.DLL
+0x76300000 - 0x763cc000 	C:\Windows\system32\MSCTF.dll
+0x75870000 - 0x758bb000 	C:\Windows\system32\apphelp.dll
+0x6d310000 - 0x6d318000 	C:\Program Files\Java\jdk1.6.0\jre\bin\hpi.dll
+0x779f0000 - 0x779f5000 	C:\Windows\system32\PSAPI.DLL
+0x6d770000 - 0x6d77c000 	C:\Program Files\Java\jdk1.6.0\jre\bin\verify.dll
+0x6d3b0000 - 0x6d3cf000 	C:\Program Files\Java\jdk1.6.0\jre\bin\java.dll
+0x6d7b0000 - 0x6d7bf000 	C:\Program Files\Java\jdk1.6.0\jre\bin\zip.dll
+0x6d000000 - 0x6d1c3000 	C:\Program Files\Java\jdk1.6.0\jre\bin\awt.dll
+0x73fb0000 - 0x74001000 	C:\Windows\system32\WINSPOOL.DRV
+0x76070000 - 0x761cc000 	C:\Windows\system32\ole32.dll
+0x744e0000 - 0x74520000 	C:\Windows\system32\uxtheme.dll
+0x6d2b0000 - 0x6d303000 	C:\Program Files\Java\jdk1.6.0\jre\bin\fontmanager.dll
+0x741f0000 - 0x74203000 	C:\Windows\system32\dwmapi.dll
+0x758c0000 - 0x758cc000 	C:\Windows\system32\CRYPTBASE.dll
+0x76430000 - 0x77079000 	C:\Windows\system32\shell32.dll
+0x763d0000 - 0x76427000 	C:\Windows\system32\SHLWAPI.dll
+0x10000000 - 0x10038000 	C:\Program Files\WIDCOMM\Bluetooth Software\btmmhook.dll
+0x75fe0000 - 0x7606f000 	C:\Windows\system32\OLEAUT32.dll
+0x6d570000 - 0x6d583000 	C:\Program Files\Java\jdk1.6.0\jre\bin\net.dll
+0x75c40000 - 0x75c75000 	C:\Windows\system32\WS2_32.dll
+0x77930000 - 0x77936000 	C:\Windows\system32\NSI.dll
+0x753b0000 - 0x753ec000 	C:\Windows\system32\mswsock.dll
+0x753a0000 - 0x753a6000 	C:\Windows\System32\wship6.dll
+0x6d590000 - 0x6d599000 	C:\Program Files\Java\jdk1.6.0\jre\bin\nio.dll
+0x04ce0000 - 0x04ce8000 	C:\Program Files\Internet Download Manager\idmmkb.dll
+0x77950000 - 0x779d3000 	C:\Windows\system32\CLBCatQ.DLL
+0x735d0000 - 0x735e0000 	C:\Windows\system32\NLAapi.dll
+0x75270000 - 0x752b4000 	C:\Windows\system32\DNSAPI.dll
+0x6f400000 - 0x6f408000 	C:\Windows\System32\winrnr.dll
+0x6f3f0000 - 0x6f400000 	C:\Windows\system32\napinsp.dll
+0x6f3d0000 - 0x6f3e2000 	C:\Windows\system32\pnrpnsp.dll
+0x6f270000 - 0x6f27d000 	C:\Windows\system32\wshbth.dll
+0x74ed0000 - 0x74ed5000 	C:\Windows\System32\wshtcpip.dll
+0x73b00000 - 0x73b1c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73af0000 - 0x73af7000 	C:\Windows\system32\WINNSI.DLL
+0x6fa40000 - 0x6fa46000 	C:\Windows\system32\rasadhlp.dll
+0x73100000 - 0x73138000 	C:\Windows\System32\fwpuclnt.dll
+0x753f0000 - 0x75406000 	C:\Windows\system32\CRYPTSP.dll
+0x75190000 - 0x751cb000 	C:\Windows\system32\rsaenh.dll
+0x74fa0000 - 0x74fb7000 	C:\Windows\system32\USERENV.dll
+0x75940000 - 0x7594b000 	C:\Windows\system32\profapi.dll
+0x6d710000 - 0x6d716000 	C:\Program Files\Java\jdk1.6.0\jre\bin\rmi.dll
+0x75a90000 - 0x75b14000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16385_none_ebf82fc36c758ad5\comctl32.dll
+0x74560000 - 0x746fe000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\comctl32.dll
+0x75ca0000 - 0x75e3d000 	C:\Windows\system32\SETUPAPI.dll
+0x759f0000 - 0x75a17000 	C:\Windows\system32\CFGMGR32.dll
+0x75a20000 - 0x75a32000 	C:\Windows\system32\DEVOBJ.dll
+0x74b40000 - 0x74c35000 	C:\Windows\system32\propsys.dll
+0x74040000 - 0x74061000 	C:\Windows\system32\ntmarta.dll
+0x77080000 - 0x770c5000 	C:\Windows\system32\WLDAP32.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8
+java_command: com.edw.main.Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\android\adt-bundle-windows-x86-20130729\sdk\tools\lib;;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Java\jdk1.7.0_51\bin
+USERNAME=Maju
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 4 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2097151k(975512k free), swap 4194303k(3524316k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0-b105) for windows-x86, built on Nov 29 2006 00:48:48 by "java_re" with unknown MS VC++:1310
+

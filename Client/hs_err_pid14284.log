@@ -1,0 +1,847 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x772c5b44, pid=14284, tid=14152
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0-b105 mixed mode, sharing)
+# Problematic frame:
+# C  [ntdll.dll+0x55b44]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x04b66c00):  JavaThread "Timer-463" [_thread_in_native, id=14152]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x6c9fbdb1
+
+Registers:
+EAX=0x000c0000, EBX=0x00000d0a, ECX=0x001bac58, EDX=0x6c9fbdb1
+ESP=0x0f08edb8, EBP=0x0f08ee88, ESI=0x001bac50, EDI=0x6db7bfb2
+EIP=0x772c5b44, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0f08edb8)
+0x0f08edb8:   78a33201 00078000 00000000 000c0000
+0x0f08edc8:   000c0150 00109480 75f3c150 00109480
+0x0f08edd8:   120d8b58 000c017c 0055005c 00650073
+0x0f08ede8:   00730072 000c0150 0000005f 123a9508
+0x0f08edf8:   006f0044 00750063 0065006d 00000040
+0x0f08ee08:   00000073 120d8b40 75f3c7b8 75f3b458
+0x0f08ee18:   00000000 02000002 6c9fbdb1 0f08ee34
+0x0f08ee28:   75f3b4ec 000c6ca8 00000000 00000082 
+
+Instructions: (pc=0x772c5b44)
+0x772c5b34:   02 00 8d 4e 08 8b 39 89 7d b8 8b 56 0c 89 55 98
+0x772c5b44:   8b 12 8b 7f 04 3b d7 0f 85 f7 22 02 00 3b d1 0f 
+
+
+Stack: [0x0f040000,0x0f090000),  sp=0x0f08edb8,  free space=315k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x55b44]
+C  [ntdll.dll+0x534ca]
+C  [ntdll.dll+0x5b181]
+C  [ntdll.dll+0x5819c]
+C  [ntdll.dll+0x52149]
+C  [shell32.dll+0xaa7f0]
+C  [shell32.dll+0xacc30]
+C  [shell32.dll+0xacbdd]
+C  [shell32.dll+0xacb7b]
+C  [shell32.dll+0xacc7e]
+C  [shell32.dll+0xacecd]
+C  [shell32.dll+0xaceb0]
+C  [shell32.dll+0xac7ff]
+C  [shell32.dll+0xac968]
+C  [shell32.dll+0xac8a4]
+C  [shell32.dll+0x7c9ec]
+C  [shell32.dll+0x930d0]
+C  [shell32.dll+0x95fb9]
+C  [shell32.dll+0x962dc]
+C  [shell32.dll+0x44a96]
+C  [shell32.dll+0x44a16]
+C  [shell32.dll+0x6c7f9]
+C  [awt.dll+0x137669]
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZ)J+33
+j  sun.awt.shell.Win32ShellFolder2.getChildByPath(Ljava/lang/String;)Lsun/awt/shell/Win32ShellFolder2;+8
+j  sun.awt.shell.Win32ShellFolderManager2.getPersonal()Lsun/awt/shell/Win32ShellFolder2;+21
+j  sun.awt.shell.Win32ShellFolder2.listFiles(Z)[Ljava/io/File;+34
+j  sun.awt.shell.ShellFolder.listFiles()[Ljava/io/File;+2
+j  sun.awt.shell.Win32ShellFolderManager2.isFileSystemRoot(Ljava/io/File;)Z+69
+j  sun.awt.shell.ShellFolder.isFileSystemRoot(Ljava/io/File;)Z+4
+j  javax.swing.filechooser.FileSystemView.isFileSystemRoot(Ljava/io/File;)Z+1
+j  javax.swing.filechooser.FileSystemView.getSystemDisplayName(Ljava/io/File;)Ljava/lang/String;+45
+j  com.edw.main.Detect_Usb.Get_Usb_list()Ljava/lang/String;+35
+j  com.edw.main.Detect_Usb.run()V+9
+j  java.util.TimerThread.mainLoop()V+221
+j  java.util.TimerThread.run()V+1
+v  ~StubRoutines::call_stub
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZZ)J+0
+j  sun.awt.shell.Win32ShellFolder2.getEnumObjects(JZ)J+33
+j  sun.awt.shell.Win32ShellFolder2.getChildByPath(Ljava/lang/String;)Lsun/awt/shell/Win32ShellFolder2;+8
+j  sun.awt.shell.Win32ShellFolderManager2.getPersonal()Lsun/awt/shell/Win32ShellFolder2;+21
+j  sun.awt.shell.Win32ShellFolder2.listFiles(Z)[Ljava/io/File;+34
+j  sun.awt.shell.ShellFolder.listFiles()[Ljava/io/File;+2
+j  sun.awt.shell.Win32ShellFolderManager2.isFileSystemRoot(Ljava/io/File;)Z+69
+j  sun.awt.shell.ShellFolder.isFileSystemRoot(Ljava/io/File;)Z+4
+j  javax.swing.filechooser.FileSystemView.isFileSystemRoot(Ljava/io/File;)Z+1
+j  javax.swing.filechooser.FileSystemView.getSystemDisplayName(Ljava/io/File;)Ljava/lang/String;+45
+j  com.edw.main.Detect_Usb.Get_Usb_list()Ljava/lang/String;+35
+j  com.edw.main.Detect_Usb.run()V+9
+j  java.util.TimerThread.mainLoop()V+221
+j  java.util.TimerThread.run()V+1
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x04c4ac00 JavaThread "Timer-613" [_thread_in_native, id=12140]
+  0x04c4a400 JavaThread "Timer-612" [_thread_in_native, id=6404]
+  0x04c4a000 JavaThread "Timer-611" [_thread_in_native, id=7408]
+  0x04c49800 JavaThread "Timer-610" [_thread_in_native, id=7924]
+  0x04c49400 JavaThread "Timer-609" [_thread_in_native, id=10468]
+  0x04c49000 JavaThread "Timer-608" [_thread_in_native, id=5188]
+  0x04c48800 JavaThread "Timer-607" [_thread_in_native, id=10024]
+  0x04c48400 JavaThread "Timer-606" [_thread_in_native, id=7912]
+  0x04c47c00 JavaThread "Timer-605" [_thread_in_native, id=3304]
+  0x04c47800 JavaThread "Timer-604" [_thread_in_native, id=7800]
+  0x04c47000 JavaThread "Timer-603" [_thread_in_native, id=6836]
+  0x04c46c00 JavaThread "Timer-602" [_thread_in_native, id=7460]
+  0x04c46400 JavaThread "Timer-601" [_thread_in_native, id=11132]
+  0x04c46000 JavaThread "Timer-600" [_thread_in_native, id=7584]
+  0x04c45c00 JavaThread "Timer-599" [_thread_blocked, id=7160]
+  0x04c45400 JavaThread "Timer-598" [_thread_blocked, id=6716]
+  0x04c45000 JavaThread "Timer-597" [_thread_in_native, id=3352]
+  0x04c44800 JavaThread "Timer-596" [_thread_in_native, id=6460]
+  0x04c44400 JavaThread "Timer-595" [_thread_blocked, id=6820]
+  0x04c43c00 JavaThread "Timer-594" [_thread_blocked, id=7940]
+  0x04c43800 JavaThread "Timer-593" [_thread_in_native, id=10724]
+  0x04c43000 JavaThread "Timer-592" [_thread_in_native, id=3828]
+  0x04c28400 JavaThread "Timer-591" [_thread_blocked, id=10224]
+  0x04c27c00 JavaThread "Timer-590" [_thread_blocked, id=12524]
+  0x04c27800 JavaThread "Timer-589" [_thread_in_native, id=12548]
+  0x04c27000 JavaThread "Timer-588" [_thread_in_native, id=6028]
+  0x04c26c00 JavaThread "Timer-587" [_thread_blocked, id=5620]
+  0x04c26800 JavaThread "Timer-586" [_thread_blocked, id=12652]
+  0x04c26000 JavaThread "Timer-585" [_thread_in_native, id=10956]
+  0x04c25c00 JavaThread "Timer-584" [_thread_in_native, id=11464]
+  0x04c25400 JavaThread "Timer-583" [_thread_blocked, id=11644]
+  0x04c25000 JavaThread "Timer-582" [_thread_blocked, id=11020]
+  0x04c24800 JavaThread "Timer-581" [_thread_in_native, id=10344]
+  0x04c24400 JavaThread "Timer-580" [_thread_blocked, id=10504]
+  0x04c23c00 JavaThread "Timer-579" [_thread_blocked, id=10360]
+  0x04c23800 JavaThread "Timer-578" [_thread_blocked, id=10636]
+  0x04c23400 JavaThread "Timer-577" [_thread_in_native, id=6120]
+  0x04c22c00 JavaThread "Timer-576" [_thread_blocked, id=13840]
+  0x04c22800 JavaThread "Timer-575" [_thread_blocked, id=13932]
+  0x04c22000 JavaThread "Timer-574" [_thread_blocked, id=7396]
+  0x04c21c00 JavaThread "Timer-573" [_thread_in_native, id=9496]
+  0x04c21400 JavaThread "Timer-572" [_thread_blocked, id=5872]
+  0x04c21000 JavaThread "Timer-571" [_thread_blocked, id=6040]
+  0x04c20800 JavaThread "Timer-570" [_thread_blocked, id=3036]
+  0x04c20400 JavaThread "Timer-569" [_thread_blocked, id=6532]
+  0x04c20000 JavaThread "Timer-568" [_thread_blocked, id=11712]
+  0x04c1f800 JavaThread "Timer-567" [_thread_blocked, id=10816]
+  0x04c1f400 JavaThread "Timer-566" [_thread_blocked, id=10984]
+  0x04c1ec00 JavaThread "Timer-565" [_thread_blocked, id=10968]
+  0x04c1e800 JavaThread "Timer-564" [_thread_blocked, id=10880]
+  0x04c1e000 JavaThread "Timer-563" [_thread_blocked, id=10920]
+  0x04c1dc00 JavaThread "Timer-562" [_thread_blocked, id=10904]
+  0x04c1d400 JavaThread "Timer-561" [_thread_blocked, id=8168]
+  0x04c1d000 JavaThread "Timer-560" [_thread_in_native, id=12964]
+  0x04c1cc00 JavaThread "Timer-559" [_thread_blocked, id=10772]
+  0x04c1c400 JavaThread "Timer-558" [_thread_blocked, id=11260]
+  0x04c1c000 JavaThread "Timer-557" [_thread_in_native, id=12684]
+  0x04c1b800 JavaThread "Timer-556" [_thread_blocked, id=13456]
+  0x04c1b400 JavaThread "Timer-555" [_thread_blocked, id=5016]
+  0x04c1ac00 JavaThread "Timer-554" [_thread_blocked, id=14160]
+  0x04c1a800 JavaThread "Timer-553" [_thread_blocked, id=14288]
+  0x04c1a000 JavaThread "Timer-552" [_thread_blocked, id=8344]
+  0x04c19c00 JavaThread "Timer-551" [_thread_blocked, id=12592]
+  0x04c19800 JavaThread "Timer-550" [_thread_blocked, id=12244]
+  0x04c19000 JavaThread "Timer-549" [_thread_blocked, id=12176]
+  0x04c18c00 JavaThread "Timer-548" [_thread_blocked, id=11992]
+  0x04bea400 JavaThread "Timer-547" [_thread_blocked, id=11552]
+  0x04be9c00 JavaThread "Timer-546" [_thread_blocked, id=6712]
+  0x04be9800 JavaThread "Timer-545" [_thread_blocked, id=13528]
+  0x04be9000 JavaThread "Timer-544" [_thread_blocked, id=8992]
+  0x04be8c00 JavaThread "Timer-543" [_thread_blocked, id=8784]
+  0x04be8800 JavaThread "Timer-542" [_thread_blocked, id=13560]
+  0x04be8000 JavaThread "Timer-541" [_thread_in_native, id=6628]
+  0x04be7c00 JavaThread "Timer-540" [_thread_blocked, id=6600]
+  0x04be7400 JavaThread "Timer-539" [_thread_blocked, id=6564]
+  0x04be7000 JavaThread "Timer-538" [_thread_blocked, id=13756]
+  0x04be6800 JavaThread "Timer-537" [_thread_in_native, id=12292]
+  0x04be6400 JavaThread "Timer-536" [_thread_blocked, id=12372]
+  0x04be5c00 JavaThread "Timer-535" [_thread_blocked, id=12332]
+  0x04be5800 JavaThread "Timer-534" [_thread_blocked, id=3476]
+  0x04be5400 JavaThread "Timer-533" [_thread_in_native, id=13904]
+  0x04be4c00 JavaThread "Timer-532" [_thread_in_native, id=14068]
+  0x04be4800 JavaThread "Timer-531" [_thread_blocked, id=13988]
+  0x04be4000 JavaThread "Timer-530" [_thread_blocked, id=1332]
+  0x04be3c00 JavaThread "Timer-529" [_thread_blocked, id=14324]
+  0x04be3400 JavaThread "Timer-528" [_thread_blocked, id=5972]
+  0x04be3000 JavaThread "Timer-527" [_thread_in_native, id=6192]
+  0x04be2800 JavaThread "Timer-526" [_thread_blocked, id=14180]
+  0x04be2400 JavaThread "Timer-525" [_thread_in_native, id=13156]
+  0x04be2000 JavaThread "Timer-524" [_thread_blocked, id=6188]
+  0x04be1800 JavaThread "Timer-523" [_thread_in_native, id=13024]
+  0x04be1400 JavaThread "Timer-522" [_thread_blocked, id=12352]
+  0x04be0c00 JavaThread "Timer-521" [_thread_in_native, id=1108]
+  0x04be0800 JavaThread "Timer-520" [_thread_blocked, id=13028]
+  0x04be0000 JavaThread "Timer-519" [_thread_in_native, id=7124]
+  0x04bdfc00 JavaThread "Timer-518" [_thread_blocked, id=8380]
+  0x04bdf400 JavaThread "Timer-517" [_thread_in_native, id=12528]
+  0x04bdf000 JavaThread "Timer-516" [_thread_blocked, id=8020]
+  0x04bdec00 JavaThread "Timer-515" [_thread_in_native, id=13172]
+  0x04bde400 JavaThread "Timer-514" [_thread_blocked, id=1960]
+  0x04bde000 JavaThread "Timer-513" [_thread_in_native, id=13184]
+  0x04bdd800 JavaThread "Timer-512" [_thread_blocked, id=12628]
+  0x04bdd400 JavaThread "Timer-511" [_thread_in_native, id=11488]
+  0x04bdcc00 JavaThread "Timer-510" [_thread_blocked, id=12248]
+  0x04bdc800 JavaThread "Timer-509" [_thread_in_native, id=13252]
+  0x04bdc000 JavaThread "Timer-508" [_thread_blocked, id=8208]
+  0x04bdbc00 JavaThread "Timer-507" [_thread_in_native, id=13880]
+  0x04bdb800 JavaThread "Timer-506" [_thread_blocked, id=7956]
+  0x04bdb000 JavaThread "Timer-505" [_thread_blocked, id=13280]
+  0x04bdac00 JavaThread "Timer-504" [_thread_blocked, id=13984]
+  0x04b75400 JavaThread "Timer-503" [_thread_in_native, id=14048]
+  0x04b75000 JavaThread "Timer-502" [_thread_blocked, id=1508]
+  0x04b74800 JavaThread "Timer-501" [_thread_blocked, id=12116]
+  0x04b74400 JavaThread "Timer-500" [_thread_blocked, id=8624]
+  0x04b73c00 JavaThread "Timer-499" [_thread_blocked, id=4372]
+  0x04b73800 JavaThread "Timer-498" [_thread_blocked, id=11888]
+  0x04b73000 JavaThread "Timer-497" [_thread_in_native, id=3748]
+  0x04b72c00 JavaThread "Timer-496" [_thread_blocked, id=11760]
+  0x04b72400 JavaThread "Timer-495" [_thread_in_native, id=11636]
+  0x04b72000 JavaThread "Timer-494" [_thread_blocked, id=10512]
+  0x04b71c00 JavaThread "Timer-493" [_thread_in_native, id=12416]
+  0x04b71400 JavaThread "Timer-492" [_thread_blocked, id=1968]
+  0x04b71000 JavaThread "Timer-491" [_thread_in_native, id=10320]
+  0x04b70800 JavaThread "Timer-490" [_thread_blocked, id=12660]
+  0x04b70400 JavaThread "Timer-489" [_thread_in_native, id=9872]
+  0x04b6fc00 JavaThread "Timer-488" [_thread_blocked, id=13148]
+  0x04b6f800 JavaThread "Timer-487" [_thread_blocked, id=13064]
+  0x04b6f000 JavaThread "Timer-486" [_thread_blocked, id=13144]
+  0x04b6ec00 JavaThread "Timer-485" [_thread_blocked, id=13176]
+  0x04b6e800 JavaThread "Timer-484" [_thread_blocked, id=13708]
+  0x04b6e000 JavaThread "Timer-483" [_thread_blocked, id=13192]
+  0x04b6dc00 JavaThread "Timer-482" [_thread_blocked, id=14040]
+  0x04b6d400 JavaThread "Timer-481" [_thread_blocked, id=13792]
+  0x04b6d000 JavaThread "Timer-480" [_thread_blocked, id=13308]
+  0x04b6c800 JavaThread "Timer-479" [_thread_in_native, id=3676]
+  0x04b6c400 JavaThread "Timer-478" [_thread_blocked, id=13828]
+  0x04b6bc00 JavaThread "Timer-477" [_thread_blocked, id=13908]
+  0x04b6b800 JavaThread "Timer-476" [_thread_blocked, id=13860]
+  0x04b6b400 JavaThread "Timer-475" [_thread_blocked, id=9808]
+  0x04b6ac00 JavaThread "Timer-474" [_thread_blocked, id=9268]
+  0x04b6a800 JavaThread "Timer-473" [_thread_blocked, id=14232]
+  0x04b6a000 JavaThread "Timer-472" [_thread_blocked, id=13288]
+  0x04b69c00 JavaThread "Timer-471" [_thread_in_native, id=8996]
+  0x04b69400 JavaThread "Timer-470" [_thread_blocked, id=3688]
+  0x04b69000 JavaThread "Timer-469" [_thread_in_Java, id=14056]
+  0x04b68800 JavaThread "Timer-468" [_thread_blocked, id=12516]
+  0x04b68400 JavaThread "Timer-467" [_thread_in_native, id=9780]
+  0x04b68000 JavaThread "Timer-466" [_thread_blocked, id=9968]
+  0x04b67800 JavaThread "Timer-465" [_thread_in_native, id=8812]
+  0x04b67400 JavaThread "Timer-464" [_thread_blocked, id=8180]
+=>0x04b66c00 JavaThread "Timer-463" [_thread_in_native, id=14152]
+  0x04b66800 JavaThread "Timer-462" [_thread_blocked, id=8140]
+  0x04b66000 JavaThread "Timer-461" [_thread_in_native, id=14264]
+  0x04b65c00 JavaThread "Timer-460" [_thread_blocked, id=14296]
+  0x04b22c00 JavaThread "Timer-459" [_thread_in_native, id=10256]
+  0x04b22800 JavaThread "Timer-458" [_thread_blocked, id=4816]
+  0x04b22000 JavaThread "Timer-457" [_thread_in_native, id=6324]
+  0x04b21c00 JavaThread "Timer-456" [_thread_blocked, id=6864]
+  0x04b21400 JavaThread "Timer-455" [_thread_in_native, id=9340]
+  0x04b21000 JavaThread "Timer-454" [_thread_blocked, id=1964]
+  0x04b20800 JavaThread "Timer-453" [_thread_blocked, id=9504]
+  0x04b20400 JavaThread "Timer-452" [_thread_blocked, id=6524]
+  0x04b20000 JavaThread "Timer-451" [_thread_in_native, id=10192]
+  0x04b1f800 JavaThread "Timer-450" [_thread_blocked, id=6636]
+  0x04b1f400 JavaThread "Timer-449" [_thread_blocked, id=9408]
+  0x04b1ec00 JavaThread "Timer-448" [_thread_blocked, id=9840]
+  0x04b1e800 JavaThread "Timer-447" [_thread_blocked, id=12944]
+  0x04b1e000 JavaThread "Timer-446" [_thread_blocked, id=5712]
+  0x04b1dc00 JavaThread "Timer-445" [_thread_in_native, id=11036]
+  0x04b1d400 JavaThread "Timer-444" [_thread_blocked, id=2776]
+  0x04b1d000 JavaThread "Timer-443" [_thread_blocked, id=8328]
+  0x04b1cc00 JavaThread "Timer-442" [_thread_blocked, id=9876]
+  0x04b1c400 JavaThread "Timer-441" [_thread_in_native, id=7468]
+  0x04b1c000 JavaThread "Timer-440" [_thread_blocked, id=12596]
+  0x04b1b800 JavaThread "Timer-439" [_thread_blocked, id=8880]
+  0x04b1b400 JavaThread "Timer-438" [_thread_blocked, id=6780]
+  0x04b1ac00 JavaThread "Timer-437" [_thread_in_native, id=8472]
+  0x04b1a800 JavaThread "Timer-436" [_thread_blocked, id=9244]
+  0x04b1a000 JavaThread "Timer-435" [_thread_in_native, id=5400]
+  0x04b19c00 JavaThread "Timer-434" [_thread_blocked, id=7100]
+  0x04b19800 JavaThread "Timer-433" [_thread_in_native, id=6960]
+  0x04b19000 JavaThread "Timer-432" [_thread_blocked, id=7852]
+  0x04b18c00 JavaThread "Timer-431" [_thread_in_native, id=7256]
+  0x04b18400 JavaThread "Timer-430" [_thread_blocked, id=6252]
+  0x04b18000 JavaThread "Timer-429" [_thread_in_native, id=7060]
+  0x04b17800 JavaThread "Timer-428" [_thread_blocked, id=5720]
+  0x04b17400 JavaThread "Timer-427" [_thread_in_native, id=6328]
+  0x04b16c00 JavaThread "Timer-426" [_thread_blocked, id=6228]
+  0x04b16800 JavaThread "Timer-425" [_thread_in_native, id=12204]
+  0x04b16400 JavaThread "Timer-424" [_thread_blocked, id=7264]
+  0x04b15c00 JavaThread "Timer-423" [_thread_in_native, id=6468]
+  0x04b15800 JavaThread "Timer-422" [_thread_blocked, id=2336]
+  0x04b15000 JavaThread "Timer-421" [_thread_in_native, id=5772]
+  0x04b14c00 JavaThread "Timer-420" [_thread_in_native, id=11892]
+  0x04b14400 JavaThread "Timer-419" [_thread_in_native, id=6736]
+  0x04b14000 JavaThread "Timer-418" [_thread_blocked, id=11812]
+  0x04b13800 JavaThread "Timer-417" [_thread_in_native, id=11752]
+  0x04b13400 JavaThread "Timer-416" [_thread_in_native, id=7600]
+  0x04ae4000 JavaThread "Timer-415" [_thread_in_native, id=7844]
+  0x04ae3800 JavaThread "Timer-414" [_thread_blocked, id=11540]
+  0x04ae3400 JavaThread "Timer-413" [_thread_in_native, id=11392]
+  0x04ae2c00 JavaThread "Timer-412" [_thread_in_native, id=11304]
+  0x04ae2800 JavaThread "Timer-411" [_thread_in_native, id=11156]
+  0x04ae2000 JavaThread "Timer-410" [_thread_blocked, id=10592]
+  0x04ae1c00 JavaThread "Timer-409" [_thread_blocked, id=10540]
+  0x04ae1400 JavaThread "Timer-408" [_thread_blocked, id=10364]
+  0x04ae1000 JavaThread "Timer-407" [_thread_blocked, id=5008]
+  0x04ae0c00 JavaThread "Timer-406" [_thread_blocked, id=10092]
+  0x04ae0400 JavaThread "Timer-405" [_thread_blocked, id=9828]
+  0x04ae0000 JavaThread "Timer-404" [_thread_blocked, id=6244]
+  0x04adf800 JavaThread "Timer-403" [_thread_blocked, id=9564]
+  0x04adf400 JavaThread "Timer-402" [_thread_blocked, id=10300]
+  0x04adec00 JavaThread "Timer-401" [_thread_blocked, id=10028]
+  0x04ade800 JavaThread "Timer-400" [_thread_blocked, id=9044]
+  0x04ade000 JavaThread "Timer-399" [_thread_blocked, id=10220]
+  0x04addc00 JavaThread "Timer-398" [_thread_blocked, id=10048]
+  0x04add800 JavaThread "Timer-397" [_thread_blocked, id=10420]
+  0x04add000 JavaThread "Timer-396" [_thread_blocked, id=9600]
+  0x04adcc00 JavaThread "Timer-395" [_thread_blocked, id=9220]
+  0x04adc400 JavaThread "Timer-394" [_thread_blocked, id=9004]
+  0x04adc000 JavaThread "Timer-393" [_thread_blocked, id=8940]
+  0x04adb800 JavaThread "Timer-392" [_thread_in_native, id=6272]
+  0x04adb400 JavaThread "Timer-391" [_thread_blocked, id=6384]
+  0x04adac00 JavaThread "Timer-390" [_thread_blocked, id=6288]
+  0x04ada800 JavaThread "Timer-389" [_thread_blocked, id=6360]
+  0x04ada400 JavaThread "Timer-388" [_thread_in_native, id=8944]
+  0x04ad9c00 JavaThread "Timer-387" [_thread_blocked, id=6344]
+  0x04ad9800 JavaThread "Timer-386" [_thread_blocked, id=8628]
+  0x04ad9000 JavaThread "Timer-385" [_thread_blocked, id=6408]
+  0x04ad8c00 JavaThread "Timer-384" [_thread_blocked, id=8788]
+  0x04ad8400 JavaThread "Timer-383" [_thread_blocked, id=8424]
+  0x04ad8000 JavaThread "Timer-382" [_thread_blocked, id=8224]
+  0x04ad7800 JavaThread "Timer-381" [_thread_blocked, id=7688]
+  0x04ad7400 JavaThread "Timer-380" [_thread_blocked, id=7616]
+  0x04ad7000 JavaThread "Timer-379" [_thread_blocked, id=6212]
+  0x04ad6800 JavaThread "Timer-378" [_thread_blocked, id=7804]
+  0x04ad6400 JavaThread "Timer-377" [_thread_blocked, id=6300]
+  0x04ad5c00 JavaThread "Timer-376" [_thread_blocked, id=184]
+  0x04ad5800 JavaThread "Timer-375" [_thread_blocked, id=7756]
+  0x04ad5000 JavaThread "Timer-374" [_thread_blocked, id=6512]
+  0x04ad4c00 JavaThread "Timer-373" [_thread_blocked, id=4508]
+  0x04ad4400 JavaThread "Timer-372" [_thread_blocked, id=6656]
+  0x04aab800 JavaThread "Timer-371" [_thread_blocked, id=6476]
+  0x04aab400 JavaThread "Timer-370" [_thread_blocked, id=6640]
+  0x04aaac00 JavaThread "Timer-369" [_thread_blocked, id=7172]
+  0x04aaa800 JavaThread "Timer-368" [_thread_blocked, id=6900]
+  0x04aaa000 JavaThread "Timer-367" [_thread_blocked, id=7892]
+  0x04aa9c00 JavaThread "Timer-366" [_thread_blocked, id=6852]
+  0x04aa9400 JavaThread "Timer-365" [_thread_blocked, id=6592]
+  0x04aa9000 JavaThread "Timer-364" [_thread_blocked, id=7352]
+  0x04aa8c00 JavaThread "Timer-363" [_thread_blocked, id=6576]
+  0x04aa8400 JavaThread "Timer-362" [_thread_blocked, id=6740]
+  0x04aa8000 JavaThread "Timer-361" [_thread_blocked, id=7472]
+  0x04aa7800 JavaThread "Timer-360" [_thread_blocked, id=7780]
+  0x04aa7400 JavaThread "Timer-359" [_thread_blocked, id=7516]
+  0x04aa6c00 JavaThread "Timer-358" [_thread_blocked, id=6876]
+  0x04aa6800 JavaThread "Timer-357" [_thread_blocked, id=7092]
+  0x04aa6000 JavaThread "Timer-356" [_thread_blocked, id=6808]
+  0x04aa5c00 JavaThread "Timer-355" [_thread_blocked, id=6908]
+  0x04aa5800 JavaThread "Timer-354" [_thread_blocked, id=6568]
+  0x04aa5000 JavaThread "Timer-353" [_thread_blocked, id=4504]
+  0x04aa4c00 JavaThread "Timer-352" [_thread_blocked, id=6232]
+  0x04aa4400 JavaThread "Timer-351" [_thread_blocked, id=6376]
+  0x04aa4000 JavaThread "Timer-350" [_thread_blocked, id=6464]
+  0x04a88800 JavaThread "Timer-349" [_thread_blocked, id=5716]
+  0x04a88400 JavaThread "Timer-348" [_thread_blocked, id=6036]
+  0x04a87c00 JavaThread "Timer-347" [_thread_blocked, id=6624]
+  0x04a87800 JavaThread "Timer-346" [_thread_blocked, id=7424]
+  0x04a87000 JavaThread "Timer-345" [_thread_blocked, id=7796]
+  0x04a86c00 JavaThread "Timer-344" [_thread_blocked, id=6436]
+  0x04a86800 JavaThread "Timer-343" [_thread_blocked, id=8448]
+  0x04a86000 JavaThread "Timer-342" [_thread_blocked, id=12920]
+  0x04a85c00 JavaThread "Timer-341" [_thread_blocked, id=12168]
+  0x04a85400 JavaThread "Timer-340" [_thread_blocked, id=8184]
+  0x04a85000 JavaThread "Timer-339" [_thread_blocked, id=6752]
+  0x04a84800 JavaThread "Timer-338" [_thread_blocked, id=12404]
+  0x04a84400 JavaThread "Timer-337" [_thread_blocked, id=5248]
+  0x04a83c00 JavaThread "Timer-336" [_thread_blocked, id=13004]
+  0x04a83800 JavaThread "Timer-335" [_thread_blocked, id=5044]
+  0x04a83400 JavaThread "Timer-334" [_thread_blocked, id=11996]
+  0x04a82c00 JavaThread "Timer-333" [_thread_blocked, id=7820]
+  0x04a82800 JavaThread "Timer-332" [_thread_blocked, id=8248]
+  0x04a82000 JavaThread "Timer-331" [_thread_blocked, id=7860]
+  0x04a81c00 JavaThread "Timer-330" [_thread_blocked, id=4120]
+  0x04a81400 JavaThread "Timer-329" [_thread_blocked, id=12708]
+  0x04a81000 JavaThread "Timer-328" [_thread_blocked, id=1216]
+  0x01985800 JavaThread "Timer-327" [_thread_blocked, id=11204]
+  0x01985000 JavaThread "Timer-326" [_thread_blocked, id=13716]
+  0x01984c00 JavaThread "Timer-325" [_thread_blocked, id=12616]
+  0x01984400 JavaThread "Timer-324" [_thread_blocked, id=4620]
+  0x01984000 JavaThread "Timer-323" [_thread_blocked, id=3300]
+  0x01983800 JavaThread "Timer-322" [_thread_blocked, id=12672]
+  0x01983400 JavaThread "Timer-321" [_thread_blocked, id=1180]
+  0x01983000 JavaThread "Timer-320" [_thread_blocked, id=6184]
+  0x01982800 JavaThread "Timer-319" [_thread_blocked, id=12336]
+  0x01982400 JavaThread "Timer-318" [_thread_blocked, id=10844]
+  0x01981c00 JavaThread "Timer-317" [_thread_blocked, id=4348]
+  0x01981800 JavaThread "Timer-316" [_thread_blocked, id=12220]
+  0x01981000 JavaThread "Timer-315" [_thread_blocked, id=12000]
+  0x01980c00 JavaThread "Timer-314" [_thread_blocked, id=7900]
+  0x01980400 JavaThread "Timer-313" [_thread_blocked, id=912]
+  0x01980000 JavaThread "Timer-312" [_thread_blocked, id=12408]
+  0x0197fc00 JavaThread "Timer-311" [_thread_blocked, id=10876]
+  0x0197f400 JavaThread "Timer-310" [_thread_blocked, id=3372]
+  0x0197f000 JavaThread "Timer-309" [_thread_blocked, id=10988]
+  0x0197e800 JavaThread "Timer-308" [_thread_blocked, id=11500]
+  0x0197e400 JavaThread "Timer-307" [_thread_blocked, id=10892]
+  0x0197dc00 JavaThread "Timer-306" [_thread_blocked, id=12236]
+  0x04a3b800 JavaThread "Timer-305" [_thread_blocked, id=12096]
+  0x04a3b000 JavaThread "Timer-304" [_thread_blocked, id=11740]
+  0x04a3ac00 JavaThread "Timer-303" [_thread_blocked, id=10568]
+  0x04a3a400 JavaThread "Timer-302" [_thread_blocked, id=2324]
+  0x04a3a000 JavaThread "Timer-301" [_thread_blocked, id=12640]
+  0x04a39800 JavaThread "Timer-300" [_thread_blocked, id=11316]
+  0x04a39400 JavaThread "Timer-299" [_thread_in_native, id=12668]
+  0x04a38c00 JavaThread "Timer-298" [_thread_blocked, id=11852]
+  0x04a38800 JavaThread "Timer-297" [_thread_blocked, id=10812]
+  0x04a38400 JavaThread "Timer-296" [_thread_blocked, id=10796]
+  0x04a37c00 JavaThread "Timer-295" [_thread_blocked, id=11948]
+  0x04a37800 JavaThread "Timer-294" [_thread_blocked, id=2572]
+  0x04a37000 JavaThread "Timer-293" [_thread_blocked, id=12188]
+  0x04a36c00 JavaThread "Timer-292" [_thread_blocked, id=11596]
+  0x04a36400 JavaThread "Timer-291" [_thread_blocked, id=10264]
+  0x04a36000 JavaThread "Timer-290" [_thread_blocked, id=5912]
+  0x04a35800 JavaThread "Timer-289" [_thread_blocked, id=9908]
+  0x04a35400 JavaThread "Timer-288" [_thread_blocked, id=10780]
+  0x04a35000 JavaThread "Timer-287" [_thread_blocked, id=11096]
+  0x04a34800 JavaThread "Timer-286" [_thread_blocked, id=11548]
+  0x04a34400 JavaThread "Timer-285" [_thread_blocked, id=11208]
+  0x04a33c00 JavaThread "Timer-284" [_thread_blocked, id=10188]
+  0x04a25400 JavaThread "Timer-283" [_thread_blocked, id=9924]
+  0x04a24c00 JavaThread "Timer-282" [_thread_blocked, id=2968]
+  0x04a24800 JavaThread "Timer-281" [_thread_blocked, id=120]
+  0x04a24000 JavaThread "Timer-280" [_thread_blocked, id=12128]
+  0x04a23c00 JavaThread "Timer-279" [_thread_blocked, id=10032]
+  0x04a23800 JavaThread "Timer-278" [_thread_blocked, id=11236]
+  0x04a23000 JavaThread "Timer-277" [_thread_blocked, id=11268]
+  0x04a22c00 JavaThread "Timer-276" [_thread_blocked, id=10520]
+  0x04a22400 JavaThread "Timer-275" [_thread_blocked, id=11836]
+  0x04a22000 JavaThread "Timer-274" [_thread_blocked, id=4612]
+  0x04a21800 JavaThread "Timer-273" [_thread_blocked, id=11868]
+  0x04a21400 JavaThread "Timer-272" [_thread_blocked, id=11220]
+  0x04a20c00 JavaThread "Timer-271" [_thread_blocked, id=8316]
+  0x04a20800 JavaThread "Timer-270" [_thread_blocked, id=14044]
+  0x04a20400 JavaThread "Timer-269" [_thread_blocked, id=10376]
+  0x04a1fc00 JavaThread "Timer-268" [_thread_blocked, id=10440]
+  0x04a1f800 JavaThread "Timer-267" [_thread_blocked, id=11428]
+  0x04a1f000 JavaThread "Timer-266" [_thread_blocked, id=6136]
+  0x04a1ec00 JavaThread "Timer-265" [_thread_blocked, id=10732]
+  0x04a1e400 JavaThread "Timer-264" [_thread_blocked, id=10208]
+  0x04a1e000 JavaThread "Timer-263" [_thread_blocked, id=11412]
+  0x04a1d800 JavaThread "Timer-262" [_thread_blocked, id=11884]
+  0x049fa800 JavaThread "Timer-261" [_thread_blocked, id=9656]
+  0x049fa400 JavaThread "Timer-260" [_thread_blocked, id=10252]
+  0x049fa000 JavaThread "Timer-259" [_thread_blocked, id=11916]
+  0x049f9800 JavaThread "Timer-258" [_thread_blocked, id=11200]
+  0x049f9400 JavaThread "Timer-257" [_thread_blocked, id=10652]
+  0x049f8c00 JavaThread "Timer-256" [_thread_blocked, id=8080]
+  0x049f8800 JavaThread "Timer-255" [_thread_blocked, id=9896]
+  0x049f8000 JavaThread "Timer-254" [_thread_blocked, id=9988]
+  0x049f7c00 JavaThread "Timer-253" [_thread_blocked, id=9836]
+  0x049f7400 JavaThread "Timer-252" [_thread_blocked, id=11804]
+  0x049f7000 JavaThread "Timer-251" [_thread_blocked, id=12396]
+  0x049f6c00 JavaThread "Timer-250" [_thread_blocked, id=5464]
+  0x049f6400 JavaThread "Timer-249" [_thread_blocked, id=12556]
+  0x049f6000 JavaThread "Timer-248" [_thread_blocked, id=4928]
+  0x049f5800 JavaThread "Timer-247" [_thread_blocked, id=8960]
+  0x049f5400 JavaThread "Timer-246" [_thread_blocked, id=9296]
+  0x049f4c00 JavaThread "Timer-245" [_thread_blocked, id=10576]
+  0x049f4800 JavaThread "Timer-244" [_thread_blocked, id=6544]
+  0x049f4000 JavaThread "Timer-243" [_thread_blocked, id=12972]
+  0x049f3c00 JavaThread "Timer-242" [_thread_blocked, id=10216]
+  0x049f3800 JavaThread "Timer-241" [_thread_blocked, id=7532]
+  0x049f3000 JavaThread "Timer-240" [_thread_blocked, id=7444]
+  0x049d4c00 JavaThread "Timer-239" [_thread_blocked, id=7652]
+  0x049d4800 JavaThread "Timer-238" [_thread_blocked, id=7260]
+  0x049d4000 JavaThread "Timer-237" [_thread_blocked, id=4936]
+  0x049d3c00 JavaThread "Timer-236" [_thread_blocked, id=11212]
+  0x049d3400 JavaThread "Timer-235" [_thread_blocked, id=6912]
+  0x049d3000 JavaThread "Timer-234" [_thread_blocked, id=12184]
+  0x049d2800 JavaThread "Timer-233" [_thread_blocked, id=5596]
+  0x049d2400 JavaThread "Timer-232" [_thread_blocked, id=7132]
+  0x049d1c00 JavaThread "Timer-231" [_thread_blocked, id=7636]
+  0x049d1800 JavaThread "Timer-230" [_thread_blocked, id=7000]
+  0x049d1000 JavaThread "Timer-229" [_thread_blocked, id=13752]
+  0x049d0c00 JavaThread "Timer-228" [_thread_blocked, id=5748]
+  0x049d0800 JavaThread "Timer-227" [_thread_blocked, id=9640]
+  0x049d0000 JavaThread "Timer-226" [_thread_blocked, id=3644]
+  0x049cfc00 JavaThread "Timer-225" [_thread_blocked, id=7380]
+  0x049cf400 JavaThread "Timer-224" [_thread_blocked, id=9576]
+  0x049cf000 JavaThread "Timer-223" [_thread_blocked, id=5316]
+  0x049ce800 JavaThread "Timer-222" [_thread_blocked, id=4528]
+  0x049ce400 JavaThread "Timer-221" [_thread_blocked, id=11052]
+  0x049cdc00 JavaThread "Timer-220" [_thread_blocked, id=5640]
+  0x049cd800 JavaThread "Timer-219" [_thread_blocked, id=10868]
+  0x049cd400 JavaThread "Timer-218" [_thread_blocked, id=3664]
+  0x049b5c00 JavaThread "Timer-217" [_thread_blocked, id=11100]
+  0x049b5400 JavaThread "Timer-216" [_thread_blocked, id=10700]
+  0x049b5000 JavaThread "Timer-215" [_thread_blocked, id=10072]
+  0x049b4c00 JavaThread "Timer-214" [_thread_blocked, id=9672]
+  0x049b4400 JavaThread "Timer-213" [_thread_blocked, id=1708]
+  0x049b4000 JavaThread "Timer-212" [_thread_in_native, id=9704]
+  0x049b3800 JavaThread "Timer-211" [_thread_blocked, id=5448]
+  0x049b3400 JavaThread "Timer-210" [_thread_blocked, id=9804]
+  0x049b2c00 JavaThread "Timer-209" [_thread_blocked, id=4876]
+  0x049b2800 JavaThread "Timer-208" [_thread_in_native, id=9688]
+  0x049b2000 JavaThread "Timer-207" [_thread_blocked, id=1344]
+  0x049b1c00 JavaThread "Timer-206" [_thread_blocked, id=3864]
+  0x049b1800 JavaThread "Timer-205" [_thread_blocked, id=3860]
+  0x049b1000 JavaThread "Timer-204" [_thread_in_native, id=13120]
+  0x049b0c00 JavaThread "Timer-203" [_thread_blocked, id=13140]
+  0x049b0400 JavaThread "Timer-202" [_thread_blocked, id=8144]
+  0x049b0000 JavaThread "Timer-201" [_thread_blocked, id=8360]
+  0x049af800 JavaThread "Timer-200" [_thread_in_native, id=12360]
+  0x049af400 JavaThread "Timer-199" [_thread_blocked, id=12064]
+  0x049aec00 JavaThread "Timer-198" [_thread_blocked, id=12384]
+  0x049ae800 JavaThread "Timer-197" [_thread_blocked, id=8148]
+  0x049ae400 JavaThread "Timer-196" [_thread_in_native, id=7904]
+  0x04997000 JavaThread "Timer-195" [_thread_blocked, id=11040]
+  0x04996800 JavaThread "Timer-194" [_thread_blocked, id=8432]
+  0x04996400 JavaThread "Timer-193" [_thread_blocked, id=10104]
+  0x04995c00 JavaThread "Timer-192" [_thread_in_native, id=7140]
+  0x04995800 JavaThread "Timer-191" [_thread_blocked, id=12508]
+  0x04995000 JavaThread "Timer-190" [_thread_blocked, id=9204]
+  0x04994c00 JavaThread "Timer-189" [_thread_blocked, id=8236]
+  0x04994400 JavaThread "Timer-188" [_thread_in_native, id=14132]
+  0x04994000 JavaThread "Timer-187" [_thread_blocked, id=7740]
+  0x04993c00 JavaThread "Timer-186" [_thread_blocked, id=7276]
+  0x04993400 JavaThread "Timer-185" [_thread_blocked, id=7928]
+  0x04993000 JavaThread "Timer-184" [_thread_in_native, id=5944]
+  0x04992800 JavaThread "Timer-183" [_thread_blocked, id=1152]
+  0x04992400 JavaThread "Timer-182" [_thread_blocked, id=14140]
+  0x04991c00 JavaThread "Timer-181" [_thread_blocked, id=7016]
+  0x04991800 JavaThread "Timer-180" [_thread_blocked, id=7040]
+  0x04991000 JavaThread "Timer-179" [_thread_blocked, id=6860]
+  0x04990c00 JavaThread "Timer-178" [_thread_blocked, id=6848]
+  0x04990800 JavaThread "Timer-177" [_thread_in_native, id=7044]
+  0x04990000 JavaThread "Timer-176" [_thread_blocked, id=6880]
+  0x0498fc00 JavaThread "Timer-175" [_thread_blocked, id=7084]
+  0x0498f400 JavaThread "Timer-174" [_thread_blocked, id=6920]
+  0x04975c00 JavaThread "Timer-173" [_thread_blocked, id=14156]
+  0x04975400 JavaThread "Timer-172" [_thread_blocked, id=6056]
+  0x04975000 JavaThread "Timer-171" [_thread_blocked, id=12368]
+  0x04974800 JavaThread "Timer-170" [_thread_blocked, id=7116]
+  0x04974400 JavaThread "Timer-169" [_thread_blocked, id=13772]
+  0x04974000 JavaThread "Timer-168" [_thread_blocked, id=14208]
+  0x04973800 JavaThread "Timer-167" [_thread_blocked, id=7508]
+  0x04973400 JavaThread "Timer-166" [_thread_blocked, id=8600]
+  0x04972c00 JavaThread "Timer-165" [_thread_blocked, id=496]
+  0x04972800 JavaThread "Timer-164" [_thread_blocked, id=8808]
+  0x04972000 JavaThread "Timer-163" [_thread_blocked, id=8444]
+  0x04971c00 JavaThread "Timer-162" [_thread_blocked, id=8972]
+  0x04971400 JavaThread "Timer-161" [_thread_blocked, id=3172]
+  0x04971000 JavaThread "Timer-160" [_thread_blocked, id=8844]
+  0x04970c00 JavaThread "Timer-159" [_thread_blocked, id=9712]
+  0x04970400 JavaThread "Timer-158" [_thread_blocked, id=9252]
+  0x04970000 JavaThread "Timer-157" [_thread_blocked, id=9148]
+  0x0496f800 JavaThread "Timer-156" [_thread_blocked, id=8528]
+  0x0496f400 JavaThread "Timer-155" [_thread_blocked, id=8876]
+  0x0496ec00 JavaThread "Timer-154" [_thread_blocked, id=8968]
+  0x0496e800 JavaThread "Timer-153" [_thread_blocked, id=8936]
+  0x0496e000 JavaThread "Timer-152" [_thread_in_native, id=9172]
+  0x045a0400 JavaThread "Timer-151" [_thread_blocked, id=8908]
+  0x045a0000 JavaThread "Timer-150" [_thread_blocked, id=8864]
+  0x0459f800 JavaThread "Timer-149" [_thread_blocked, id=9216]
+  0x0459f400 JavaThread "Timer-148" [_thread_in_native, id=7760]
+  0x0459ec00 JavaThread "Timer-147" [_thread_blocked, id=9036]
+  0x0459e800 JavaThread "Timer-146" [_thread_blocked, id=9388]
+  0x0459e400 JavaThread "Timer-145" [_thread_blocked, id=10532]
+  0x0459dc00 JavaThread "Timer-144" [_thread_blocked, id=8536]
+  0x0459d800 JavaThread "Timer-143" [_thread_blocked, id=13548]
+  0x0459d000 JavaThread "Timer-142" [_thread_blocked, id=14124]
+  0x0459cc00 JavaThread "Timer-141" [_thread_blocked, id=7412]
+  0x0459c400 JavaThread "Timer-140" [_thread_blocked, id=8188]
+  0x0459c000 JavaThread "Timer-139" [_thread_blocked, id=12464]
+  0x0459b800 JavaThread "Timer-138" [_thread_blocked, id=8340]
+  0x0459b400 JavaThread "Timer-137" [_thread_blocked, id=2032]
+  0x0459b000 JavaThread "Timer-136" [_thread_blocked, id=7884]
+  0x0459a800 JavaThread "Timer-135" [_thread_blocked, id=10332]
+  0x0459a400 JavaThread "Timer-134" [_thread_blocked, id=9584]
+  0x04599c00 JavaThread "Timer-133" [_thread_blocked, id=13256]
+  0x04599800 JavaThread "Timer-132" [_thread_blocked, id=7176]
+  0x04599000 JavaThread "Timer-131" [_thread_blocked, id=5844]
+  0x04598c00 JavaThread "Timer-130" [_thread_blocked, id=11296]
+  0x04575c00 JavaThread "Timer-129" [_thread_blocked, id=13356]
+  0x04575800 JavaThread "Timer-128" [_thread_blocked, id=13340]
+  0x04575000 JavaThread "Timer-127" [_thread_blocked, id=10044]
+  0x04574c00 JavaThread "Timer-126" [_thread_blocked, id=11148]
+  0x04574800 JavaThread "Timer-125" [_thread_blocked, id=10688]
+  0x04574000 JavaThread "Timer-124" [_thread_blocked, id=11176]
+  0x04573c00 JavaThread "Timer-123" [_thread_blocked, id=11196]
+  0x04573400 JavaThread "Timer-122" [_thread_blocked, id=11128]
+  0x04573000 JavaThread "Timer-121" [_thread_blocked, id=13324]
+  0x04572800 JavaThread "Timer-120" [_thread_blocked, id=10580]
+  0x04572400 JavaThread "Timer-119" [_thread_blocked, id=10464]
+  0x04571c00 JavaThread "Timer-118" [_thread_blocked, id=10560]
+  0x04571800 JavaThread "Timer-117" [_thread_blocked, id=13068]
+  0x04571400 JavaThread "Timer-116" [_thread_blocked, id=10428]
+  0x04570c00 JavaThread "Timer-115" [_thread_blocked, id=10388]
+  0x04570800 JavaThread "Timer-114" [_thread_blocked, id=10480]
+  0x04570000 JavaThread "Timer-113" [_thread_blocked, id=9628]
+  0x0456fc00 JavaThread "Timer-112" [_thread_blocked, id=10352]
+  0x0456f400 JavaThread "Timer-111" [_thread_in_native, id=10416]
+  0x0456f000 JavaThread "Timer-110" [_thread_blocked, id=9020]
+  0x0456e800 JavaThread "Timer-109" [_thread_blocked, id=9376]
+  0x0456e400 JavaThread "Timer-108" [_thread_blocked, id=5884]
+  0x04544c00 JavaThread "Timer-107" [_thread_in_native, id=7560]
+  0x04544400 JavaThread "Timer-106" [_thread_blocked, id=14060]
+  0x04544000 JavaThread "Timer-105" [_thread_blocked, id=14080]
+  0x04543800 JavaThread "Timer-104" [_thread_blocked, id=6124]
+  0x04543400 JavaThread "Timer-103" [_thread_in_native, id=9940]
+  0x04542c00 JavaThread "Timer-102" [_thread_blocked, id=6060]
+  0x04542800 JavaThread "Timer-101" [_thread_blocked, id=13732]
+  0x04542000 JavaThread "Timer-100" [_thread_blocked, id=6680]
+  0x04541c00 JavaThread "Timer-99" [_thread_in_native, id=7220]
+  0x04541800 JavaThread "Timer-98" [_thread_blocked, id=13584]
+  0x04541000 JavaThread "Timer-97" [_thread_blocked, id=13536]
+  0x04540c00 JavaThread "Timer-96" [_thread_blocked, id=13444]
+  0x04540400 JavaThread "Timer-95" [_thread_in_native, id=13504]
+  0x04540000 JavaThread "Timer-94" [_thread_blocked, id=13472]
+  0x0453f800 JavaThread "Timer-93" [_thread_blocked, id=13508]
+  0x0453f400 JavaThread "Timer-92" [_thread_blocked, id=13520]
+  0x0453ec00 JavaThread "Timer-91" [_thread_blocked, id=8260]
+  0x0453e800 JavaThread "Timer-90" [_thread_blocked, id=11388]
+  0x0453e400 JavaThread "Timer-89" [_thread_blocked, id=11324]
+  0x0453dc00 JavaThread "Timer-88" [_thread_blocked, id=11356]
+  0x0453d800 JavaThread "Timer-87" [_thread_blocked, id=11124]
+  0x0453d000 JavaThread "Timer-86" [_thread_blocked, id=13332]
+  0x045de400 JavaThread "Timer-85" [_thread_blocked, id=13344]
+  0x045de000 JavaThread "Timer-84" [_thread_blocked, id=2784]
+  0x045dd800 JavaThread "Timer-83" [_thread_blocked, id=13404]
+  0x045dd400 JavaThread "Timer-82" [_thread_blocked, id=11256]
+  0x045dd000 JavaThread "Timer-81" [_thread_blocked, id=13884]
+  0x045dc800 JavaThread "Timer-80" [_thread_blocked, id=13896]
+  0x045dc400 JavaThread "Timer-79" [_thread_blocked, id=13360]
+  0x045dbc00 JavaThread "Timer-78" [_thread_blocked, id=13476]
+  0x045db800 JavaThread "Timer-77" [_thread_blocked, id=13364]
+  0x045db000 JavaThread "Timer-76" [_thread_blocked, id=13376]
+  0x045dac00 JavaThread "Timer-75" [_thread_blocked, id=13396]
+  0x045da400 JavaThread "Timer-74" [_thread_blocked, id=13408]
+  0x045da000 JavaThread "Timer-73" [_thread_blocked, id=13412]
+  0x045d9c00 JavaThread "Timer-72" [_thread_blocked, id=13428]
+  0x045d9400 JavaThread "Timer-71" [_thread_blocked, id=13440]
+  0x045d9000 JavaThread "Timer-70" [_thread_blocked, id=13540]
+  0x045d8800 JavaThread "Timer-69" [_thread_blocked, id=7564]
+  0x045d8400 JavaThread "Timer-68" [_thread_blocked, id=8244]
+  0x045d7c00 JavaThread "Timer-67" [_thread_blocked, id=8892]
+  0x045d7800 JavaThread "Timer-66" [_thread_blocked, id=7592]
+  0x045d7000 JavaThread "Timer-65" [_thread_blocked, id=12924]
+  0x045d6c00 JavaThread "Timer-64" [_thread_blocked, id=7204]
+  0x019b1c00 JavaThread "Timer-63" [_thread_blocked, id=10316]
+  0x019b1400 JavaThread "Timer-62" [_thread_blocked, id=7724]
+  0x019b1000 JavaThread "Timer-61" [_thread_blocked, id=10784]
+  0x019b0800 JavaThread "Timer-60" [_thread_blocked, id=9256]
+  0x019b0400 JavaThread "Timer-59" [_thread_blocked, id=9528]
+  0x019b0000 JavaThread "Timer-58" [_thread_blocked, id=10792]
+  0x019af800 JavaThread "Timer-57" [_thread_blocked, id=13820]
+  0x019af400 JavaThread "Timer-56" [_thread_blocked, id=14236]
+  0x019aec00 JavaThread "Timer-55" [_thread_blocked, id=13720]
+  0x019ae800 JavaThread "Timer-54" [_thread_blocked, id=9708]
+  0x019ae000 JavaThread "Timer-53" [_thread_blocked, id=7896]
+  0x019adc00 JavaThread "Timer-52" [_thread_blocked, id=13700]
+  0x019ad400 JavaThread "Timer-51" [_thread_blocked, id=13668]
+  0x019ad000 JavaThread "Timer-50" [_thread_blocked, id=13648]
+  0x019acc00 JavaThread "Timer-49" [_thread_blocked, id=13696]
+  0x019ac400 JavaThread "Timer-48" [_thread_blocked, id=7492]
+  0x019ac000 JavaThread "Timer-47" [_thread_blocked, id=7072]
+  0x019ab800 JavaThread "Timer-46" [_thread_blocked, id=13632]
+  0x019ab400 JavaThread "Timer-45" [_thread_blocked, id=9944]
+  0x019aac00 JavaThread "Timer-44" [_thread_blocked, id=14192]
+  0x019aa800 JavaThread "Timer-43" [_thread_blocked, id=6700]
+  0x019aa000 JavaThread "Timer-42" [_thread_blocked, id=11352]
+  0x04510400 JavaThread "Timer-41" [_thread_blocked, id=6872]
+  0x04510000 JavaThread "Timer-40" [_thread_blocked, id=7452]
+  0x0450f800 JavaThread "Timer-39" [_thread_blocked, id=7088]
+  0x0450f400 JavaThread "Timer-38" [_thread_blocked, id=7104]
+  0x0450ec00 JavaThread "Timer-37" [_thread_blocked, id=6824]
+  0x0450e800 JavaThread "Timer-36" [_thread_blocked, id=7384]
+  0x0450e000 JavaThread "Timer-35" [_thread_blocked, id=7580]
+  0x0450dc00 JavaThread "Timer-34" [_thread_blocked, id=7268]
+  0x0450d400 JavaThread "Timer-33" [_thread_blocked, id=7512]
+  0x0450d000 JavaThread "Timer-32" [_thread_blocked, id=7324]
+  0x0450c800 JavaThread "Timer-31" [_thread_blocked, id=6904]
+  0x0450c400 JavaThread "Timer-30" [_thread_blocked, id=7784]
+  0x0450c000 JavaThread "Timer-29" [_thread_blocked, id=7196]
+  0x0450b800 JavaThread "Timer-28" [_thread_blocked, id=7024]
+  0x0450b400 JavaThread "Timer-27" [_thread_blocked, id=7544]
+  0x0450ac00 JavaThread "Timer-26" [_thread_blocked, id=7404]
+  0x0450a800 JavaThread "Timer-25" [_thread_blocked, id=7364]
+  0x0450a000 JavaThread "Timer-24" [_thread_blocked, id=7624]
+  0x04509c00 JavaThread "Timer-23" [_thread_blocked, id=7316]
+  0x04509400 JavaThread "Timer-22" [_thread_blocked, id=8632]
+  0x04509000 JavaThread "Timer-21" [_thread_blocked, id=9080]
+  0x04508c00 JavaThread "Timer-20" [_thread_blocked, id=11340]
+  0x0467fc00 JavaThread "Timer-19" [_thread_blocked, id=8512]
+  0x0467f400 JavaThread "Timer-18" [_thread_blocked, id=6180]
+  0x0467f000 JavaThread "Timer-17" [_thread_blocked, id=8488]
+  0x0467e800 JavaThread "Timer-16" [_thread_blocked, id=10548]
+  0x0467e400 JavaThread "Timer-15" [_thread_blocked, id=12588]
+  0x0467e000 JavaThread "Timer-14" [_thread_blocked, id=12164]
+  0x0467d800 JavaThread "Timer-13" [_thread_blocked, id=11480]
+  0x0467d400 JavaThread "Timer-12" [_thread_blocked, id=11516]
+  0x0467cc00 JavaThread "Timer-11" [_thread_blocked, id=3296]
+  0x0467c800 JavaThread "Timer-10" [_thread_blocked, id=12928]
+  0x0467c000 JavaThread "Timer-9" [_thread_blocked, id=12968]
+  0x0467bc00 JavaThread "Timer-8" [_thread_blocked, id=1380]
+  0x0467b400 JavaThread "Timer-7" [_thread_blocked, id=12772]
+  0x0467b000 JavaThread "Timer-6" [_thread_blocked, id=7272]
+  0x0467ac00 JavaThread "Timer-5" [_thread_blocked, id=12728]
+  0x0467a400 JavaThread "Timer-4" [_thread_blocked, id=12504]
+  0x0467a000 JavaThread "Timer-3" [_thread_blocked, id=10148]
+  0x04679800 JavaThread "Timer-2" [_thread_blocked, id=8428]
+  0x04679400 JavaThread "Timer-1" [_thread_blocked, id=14272]
+  0x04678c00 JavaThread "Timer-0" [_thread_blocked, id=12696]
+  0x04678800 JavaThread "Thread-2" [_thread_in_native, id=8760]
+  0x04678000 JavaThread "RMI RenewClean-[192.168.1.53:53252]" daemon [_thread_blocked, id=12676]
+  0x04658800 JavaThread "RMI Scheduler(0)" daemon [_thread_blocked, id=14220]
+  0x0451c400 JavaThread "GC Daemon" daemon [_thread_blocked, id=14224]
+  0x0451c000 JavaThread "RMI Reaper" [_thread_blocked, id=14144]
+  0x0451b800 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=9248]
+  0x019da000 JavaThread "RMI TCP Accept-9001" daemon [_thread_in_native, id=10788]
+  0x04960c00 JavaThread "TimerQueue" daemon [_thread_blocked, id=13380]
+  0x002c7000 JavaThread "DestroyJavaVM" [_thread_blocked, id=9892]
+  0x04625000 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=13080]
+  0x019b9c00 JavaThread "AWT-Windows" daemon [_thread_in_native, id=8688]
+  0x019b9800 JavaThread "AWT-Shutdown" [_thread_blocked, id=10840]
+  0x019b6c00 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8704]
+  0x0197b400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=12732]
+  0x01967c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=10960]
+  0x01967400 JavaThread "Attach Listener" daemon [_thread_blocked, id=12752]
+  0x01966c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=11044]
+  0x01928000 JavaThread "Finalizer" daemon [_thread_blocked, id=12756]
+  0x0191f400 JavaThread "Reference Handler" daemon [_thread_blocked, id=10936]
+
+Other Threads:
+  0x01916000 VMThread [id=12764]
+  0x0197d400 WatcherThread [id=10980]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4544K, used 759K [0x23a20000, 0x23f00000, 0x23f00000)
+  eden space 4096K,  17% used [0x23a20000, 0x23ad30c0, 0x23e20000)
+  from space 448K,   9% used [0x23e20000, 0x23e2ae68, 0x23e90000)
+  to   space 448K,   0% used [0x23e90000, 0x23e90000, 0x23f00000)
+ tenured generation   total 58648K, used 43619K [0x23f00000, 0x27846000, 0x27a20000)
+   the space 58648K,  74% used [0x23f00000, 0x26998c80, 0x26998e00, 0x27846000)
+ compacting perm gen  total 12288K, used 1264K [0x27a20000, 0x28620000, 0x2ba20000)
+   the space 12288K,  10% used [0x27a20000, 0x27b5c178, 0x27b5c200, 0x28620000)
+    ro space 8192K,  66% used [0x2ba20000, 0x2bf69920, 0x2bf69a00, 0x2c220000)
+    rw space 12288K,  52% used [0x2c220000, 0x2c866130, 0x2c866200, 0x2ce20000)
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	C:\Program Files\Java\jdk1.6.0\bin\java.exe
+0x77270000 - 0x773ac000 	C:\Windows\SYSTEM32\ntdll.dll
+0x756d0000 - 0x757a4000 	C:\Windows\system32\kernel32.dll
+0x75500000 - 0x7554a000 	C:\Windows\system32\KERNELBASE.dll
+0x76be0000 - 0x76c80000 	C:\Windows\system32\ADVAPI32.dll
+0x76ce0000 - 0x76d8c000 	C:\Windows\system32\msvcrt.dll
+0x76bc0000 - 0x76bd9000 	C:\Windows\SYSTEM32\sechost.dll
+0x76e20000 - 0x76ec1000 	C:\Windows\system32\RPCRT4.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0\jre\bin\msvcr71.dll
+0x6d7c0000 - 0x6da07000 	C:\Program Files\Java\jdk1.6.0\jre\bin\client\jvm.dll
+0x76af0000 - 0x76bb9000 	C:\Windows\system32\USER32.dll
+0x76f80000 - 0x76fce000 	C:\Windows\system32\GDI32.dll
+0x76f70000 - 0x76f7a000 	C:\Windows\system32\LPK.dll
+0x76ed0000 - 0x76f6d000 	C:\Windows\system32\USP10.dll
+0x74540000 - 0x74572000 	C:\Windows\system32\WINMM.dll
+0x77480000 - 0x7749f000 	C:\Windows\system32\IMM32.DLL
+0x773b0000 - 0x7747c000 	C:\Windows\system32\MSCTF.dll
+0x752f0000 - 0x7533b000 	C:\Windows\system32\apphelp.dll
+0x6d310000 - 0x6d318000 	C:\Program Files\Java\jdk1.6.0\jre\bin\hpi.dll
+0x756c0000 - 0x756c5000 	C:\Windows\system32\PSAPI.DLL
+0x6d770000 - 0x6d77c000 	C:\Program Files\Java\jdk1.6.0\jre\bin\verify.dll
+0x6d3b0000 - 0x6d3cf000 	C:\Program Files\Java\jdk1.6.0\jre\bin\java.dll
+0x6d7b0000 - 0x6d7bf000 	C:\Program Files\Java\jdk1.6.0\jre\bin\zip.dll
+0x6d000000 - 0x6d1c3000 	C:\Program Files\Java\jdk1.6.0\jre\bin\awt.dll
+0x73a60000 - 0x73ab1000 	C:\Windows\system32\WINSPOOL.DRV
+0x77110000 - 0x7726c000 	C:\Windows\system32\ole32.dll
+0x74130000 - 0x74170000 	C:\Windows\system32\uxtheme.dll
+0x6d2b0000 - 0x6d303000 	C:\Program Files\Java\jdk1.6.0\jre\bin\fontmanager.dll
+0x73c30000 - 0x73c43000 	C:\Windows\system32\dwmapi.dll
+0x75340000 - 0x7534c000 	C:\Windows\system32\CRYPTBASE.dll
+0x75ea0000 - 0x76ae9000 	C:\Windows\system32\shell32.dll
+0x75e10000 - 0x75e67000 	C:\Windows\system32\SHLWAPI.dll
+0x10000000 - 0x10038000 	C:\Program Files\WIDCOMM\Bluetooth Software\btmmhook.dll
+0x759e0000 - 0x75a6f000 	C:\Windows\system32\OLEAUT32.dll
+0x6d570000 - 0x6d583000 	C:\Program Files\Java\jdk1.6.0\jre\bin\net.dll
+0x76de0000 - 0x76e15000 	C:\Windows\system32\WS2_32.dll
+0x757c0000 - 0x757c6000 	C:\Windows\system32\NSI.dll
+0x74e30000 - 0x74e6c000 	C:\Windows\system32\mswsock.dll
+0x74e20000 - 0x74e26000 	C:\Windows\System32\wship6.dll
+0x6d590000 - 0x6d599000 	C:\Program Files\Java\jdk1.6.0\jre\bin\nio.dll
+0x048a0000 - 0x048a8000 	C:\Program Files\Internet Download Manager\idmmkb.dll
+0x758d0000 - 0x75953000 	C:\Windows\system32\CLBCatQ.DLL
+0x04090000 - 0x040b1000 	C:\Program Files\WIDCOMM\Bluetooth Software\btkeyind.dll
+0x74e70000 - 0x74e86000 	C:\Windows\system32\CRYPTSP.dll
+0x74c10000 - 0x74c4b000 	C:\Windows\system32\rsaenh.dll
+0x74a20000 - 0x74a37000 	C:\Windows\system32\USERENV.dll
+0x753c0000 - 0x753cb000 	C:\Windows\system32\profapi.dll
+0x730a0000 - 0x730b0000 	C:\Windows\system32\NLAapi.dll
+0x74cf0000 - 0x74d34000 	C:\Windows\system32\DNSAPI.dll
+0x6e190000 - 0x6e198000 	C:\Windows\System32\winrnr.dll
+0x6c350000 - 0x6c360000 	C:\Windows\system32\napinsp.dll
+0x6bcc0000 - 0x6bcd2000 	C:\Windows\system32\pnrpnsp.dll
+0x70330000 - 0x7033d000 	C:\Windows\system32\wshbth.dll
+0x74950000 - 0x74955000 	C:\Windows\System32\wshtcpip.dll
+0x73530000 - 0x7354c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73520000 - 0x73527000 	C:\Windows\system32\WINNSI.DLL
+0x6eda0000 - 0x6eda6000 	C:\Windows\system32\rasadhlp.dll
+0x72c80000 - 0x72cb8000 	C:\Windows\System32\fwpuclnt.dll
+0x6d710000 - 0x6d716000 	C:\Program Files\Java\jdk1.6.0\jre\bin\rmi.dll
+0x75470000 - 0x754f4000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7600.16385_none_ebf82fc36c758ad5\comctl32.dll
+0x741f0000 - 0x7438e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\comctl32.dll
+0x74020000 - 0x74115000 	C:\Windows\system32\propsys.dll
+0x73950000 - 0x73971000 	C:\Windows\system32\ntmarta.dll
+0x76d90000 - 0x76dd5000 	C:\Windows\system32\WLDAP32.dll
+0x6afd0000 - 0x6b168000 	C:\Windows\system32\NetworkExplorer.dll
+0x72f10000 - 0x72f1a000 	C:\Windows\system32\slc.dll
+0x75c70000 - 0x75e0d000 	C:\Windows\system32\SETUPAPI.dll
+0x75440000 - 0x75467000 	C:\Windows\system32\CFGMGR32.dll
+0x75550000 - 0x75562000 	C:\Windows\system32\DEVOBJ.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8
+java_command: com.edw.main.Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\android\adt-bundle-windows-x86-20130729\sdk\tools\lib;;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Java\jdk1.7.0_51\bin
+USERNAME=Maju
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 4 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2097151k(904648k free), swap 4194303k(3319112k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0-b105) for windows-x86, built on Nov 29 2006 00:48:48 by "java_re" with unknown MS VC++:1310
+
